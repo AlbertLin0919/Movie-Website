@@ -16,7 +16,7 @@ const MovieList = () => {
   useEffect(() => {
     getData();
     window.scrollTo(0, 0);
-  }, [type, currentPage, activeGenre]);
+  }, [type, currentPage]);
 
   const filterMovies = () => {
     if (activeGenre === 0) {
