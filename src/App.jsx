@@ -14,7 +14,7 @@ function App() {
       <MovieProvider>
         <Header />
         <Routes>
-          <Route index element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="movie/:id" element={<Movie />} />
           <Route path="movies/:type" element={<MovieList />} />
           <Route path="*" element={<Error />} />
