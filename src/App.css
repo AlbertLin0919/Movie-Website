@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap");
+.App {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(20, 20, 20);
+}
+.filter_container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.filter_container button {
+  margin-left: 2rem;
+  font-size: 18px;
+  padding: 5px 16px;
+  border-radius: 0.75rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  transition: all 0.4s ease;
+}
+.filter_container button:hover,
+button.active {
+  background-color: white;
+  color: black;
+}

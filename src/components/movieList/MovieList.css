@@ -1,0 +1,64 @@
+.movie__list {
+  padding: 0 3rem 3rem 3rem;
+}
+
+.list__title {
+  font-size: 1.75rem;
+  margin: 2.5rem;
+  text-align: center;
+}
+
+.list__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 10rem 5rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: white;
+}
+
+.pagination ul {
+  display: flex;
+  list-style: none;
+}
+
+.pagination li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination li:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagination li:hover a {
+  color: #fff;
+}
+
+.pagination .disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination__page--active {
+  background-color: #333;
+  color: #fff;
+}

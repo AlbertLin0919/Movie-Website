@@ -1,0 +1,14 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.error h1 {
+  font-size: 5rem;
+}
+.error h2 {
+  font-size: 2rem;
+}

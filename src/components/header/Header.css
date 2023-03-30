@@ -1,0 +1,53 @@
+.header {
+  margin: 0 2.5rem;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 160px;
+}
+
+.header a {
+  color: #e5e5e5;
+}
+
+a > span {
+  position: relative;
+  margin: 0 30px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+a > span::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 50px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: all 0.4s ease;
+}
+
+a > span:hover::after {
+  transform: scaleX(1);
+}
+
+a.active > span::after {
+  transform: scaleX(1);
+}
+a.active > span {
+  color: white;
+}
