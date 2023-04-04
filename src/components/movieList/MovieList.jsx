@@ -13,6 +13,14 @@ const MovieList = () => {
   const [filtered, setFiltered] = useState([]);
   const { type } = useParams();
 
+  const GENRES = [
+    { id: 0, name: "全部" },
+    { id: 28, name: "動作" },
+    { id: 18, name: "劇情" },
+    { id: 27, name: "恐怖" },
+    { id: 35, name: "喜劇" },
+  ];
+
   useEffect(() => {
     getData();
     window.scrollTo(0, 0);
@@ -54,36 +62,15 @@ const MovieList = () => {
     <div className="movie__list">
       <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>
       <div className="filter_container">
-        <button
-          className={activeGenre === 0 ? "active" : ""}
-          onClick={() => setActiveGenre(0)}
-        >
-          全部
-        </button>
-        <button
-          className={activeGenre === 28 ? "active" : ""}
-          onClick={() => setActiveGenre(28)}
-        >
-          動作
-        </button>
-        <button
-          className={activeGenre === 18 ? "active" : ""}
-          onClick={() => setActiveGenre(18)}
-        >
-          劇情
-        </button>
-        <button
-          className={activeGenre === 27 ? "active" : ""}
-          onClick={() => setActiveGenre(27)}
-        >
-          恐怖
-        </button>
-        <button
-          className={activeGenre === 35 ? "active" : ""}
-          onClick={() => setActiveGenre(35)}
-        >
-          喜劇
-        </button>
+        {GENRES.map((genre) => (
+          <button
+            className={activeGenre === genre.id ? "active" : ""}
+            onClick={() => setActiveGenre(genre.id)}
+            key={genre.id}
+          >
+            {genre.name}
+          </button>
+        ))}
       </div>
       <motion.div layout className="list__cards">
         <AnimatePresence>
