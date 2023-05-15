@@ -12,7 +12,6 @@ const Home = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(movies);
   return (
     <>
       <div className="poster">
