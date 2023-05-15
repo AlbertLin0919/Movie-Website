@@ -71,15 +71,9 @@ const Movie = () => {
             <div className="movie__genres">
               {currentMovieDetail && currentMovieDetail.genres
                 ? currentMovieDetail.genres.map((genre) => (
-                    <>
-                      <span
-                        className="movie__genre"
-                        id={genre.id}
-                        key={genre.id}
-                      >
-                        {genre.name}
-                      </span>
-                    </>
+                    <span className="movie__genre" id={genre.id} key={genre.id}>
+                      {genre.name}
+                    </span>
                   ))
                 : ""}
             </div>
