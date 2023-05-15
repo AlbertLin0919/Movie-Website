@@ -9,7 +9,9 @@ const Movie = () => {
 
   const getDetail = async () => {
     let res = await fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=14b93aff8c1d147576bf44592b5f479a&language=zh-TW`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${
+        import.meta.env.VITE_API_KEY
+      }&language=zh-TW`
     );
     let data = await res.json();
     setCurrentMovieDetail(data);
